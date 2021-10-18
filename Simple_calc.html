@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calc</title>
+</head>
+<body>
+    <form name="calc" style="margin: 100px 500px;">
+        <h1>Simple Calculator</h1><hr><br>
+        <div>
+            <label>Number 1 :</label>
+            <input type="number" name="num1">
+        </div>
+        <br/>
+        <div>
+            <label>Number 2 :</label>
+            <input type="number" name="num2">
+        </div>
+        <br/>
+        <div>
+            <label>Get Result:</label>
+            <input type="number" name="result">
+        </div>
+        <br/>
+        <div>
+            <button type="button" onclick="add()">ADD</button>
+            <button type="button" onclick="sub()">SUB</button>
+            <button type="button" onclick="mul()">MUL</button>
+            <button type="button" onclick="div()">DIV</button>
+            <button type="button" onclick="mod()">MOD</button>
+            <button type="button" onclick="clr()">Clear</button>
+        </div>
+    </form>
+    <script>
+        function add(){
+            let number1=parseInt(calc.num1.value);
+            let number2=parseInt(calc.num2.value);
+            var output=number1+number2;
+            calc.result.value=output;
+        }
+        function sub(){
+            let number1=parseInt(calc.num1.value);
+            let number2=parseInt(calc.num2.value);
+            var output=number1-number2;
+            calc.result.value=output;
+        }
+        function mul(){
+            let number1=parseInt(calc.num1.value);
+            let number2=parseInt(calc.num2.value);
+            var output=number1*number2;
+            calc.result.value=output;
+        }
+        function div(){
+            let number1=parseInt(calc.num1.value);
+            let number2=parseInt(calc.num2.value);
+            var output=number1/number2;
+            calc.result.value=output;
+        }
+        function mod(){
+            let number1=parseInt(calc.num1.value);
+            let number2=parseInt(calc.num2.value);
+            var output=number1%number2;
+            calc.result.value=output;
+        }
+        function clr(){
+            calc.num1.value="";
+            calc.num2.value="";
+            calc.result.value="";
+        }
+            
+    </script>
+</body>
+</html>
