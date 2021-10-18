@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form name="login" style="margin: 100px 500px;">
+        <b>Login Form</b><hr>
+        <div>
+            <label>Login :</label>
+            <input type="text" name="name">
+        </div><br/>
+        <div>
+            <label>Password :</label>
+            <input type="password" name="password">
+        </div><br/>
+        <button type="submit" onclick="return validate()">Login</button>
+        <button type="reset" onclick="reset()" id="reset">Reset</button>
+    </form>
+    <script>
+        function validate(){
+            let log=login.name.value;
+            let pass=login.password.value;
+            if(log==""&&pass==""){
+                alert("Fill mandatory fields");
+                login.name.focus();
+                return false;
+            }
+            if(log==""){
+                alert("Name is required");
+                login.name.focus();
+                return false;
+            }
+            if(pass==""){
+                alert("Password is required");
+                login.password.focus();
+                return false;
+            }
+            else{
+                alert("Login successfull");
+                return true;
+            }
+            return false;
+        }
+        function reset(){
+            login.name.value="";
+            login.password.value="";
+        }
+    </script>
+</body>
+</html>
